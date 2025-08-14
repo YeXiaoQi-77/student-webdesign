@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Global Warming</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-...your-integrity-code..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><i class="fa-solid fa-earth-americas fa-xl"></i></div>
+<div class="hamburger-container">
+  <img src="images/Hamburger.png" alt="menu" class="hamburger-icon" id="hamburger-icon">
+</div>
+<nav class="nav-items" id="nav-items">
+  <a href="cause.html">CAUSES</a>
+  <a href="effect.html">EFFECTS</a>
+  <a href="solution.html">SOLUTIONS</a>
+</nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-text">
+      <h1>GLOBAL WARMING</h1>
+      <p>Global warming is a long-term increase in Earth's average temperature. It is primarily driven by human activities.</p>
+      <a href="https://www.nrdc.org/stories/global-warming-101" class="btn">Learn More</a>
+    </div>
+  </section>
+
+  <section class="info-cards">
+    <a href="cause.html" class="card-link">
+  <div class="card" id="causes">
+    <img src="images/home_earth1.png">
+    <h2>CAUSES</h2>
+    <p>The main cause is the emission of greenhouse gases such as carbon dioxide and methane.</p>
+  </div>
+</a>
+    <a href="effect.html" class="card-link">
+  <div class="card" id="effects">
+    <img src="images/home_glacier.png">
+    <h2>EFFECTS</h2>
+    <p>The effects include rising sea levels, more frequent heatwaves, and shifting weather patterns.</p>
+  </div>
+</a>
+    <a href="solution.html" class="card-link">
+  <div class="card" id="solutions">
+    <img src="images/home_seedling.png">
+    <h2>SOLUTIONS</h2>
+    <p>Mitigating global warming requires reducing greenhouse gas emissions and adopting sustainable practices.</p>
+  </div>
+</a>
+  </section>
+
+<center>
+<footer>
+  <div class="footer-text-container">
+    <p class="footer-text">
+      This website gives credit to ChatGPT for creation of background image.
+    </p>
+
+    <p class="footer-text">
+      © All images and related content are sourced from public online platforms and are used for illustrative purposes only. Copyrights belong to their respective owners.
+    </p>
+  </div>
+</footer>
+
+</center>
+  <script>
+  const icon = document.getElementById("hamburger-icon");
+  const menu = document.getElementById("nav-items");
+
+  icon.addEventListener("click", () => {
+    menu.classList.toggle("show-nav");
+  });
+</script>
+</body>
+
+</html>

@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-...your-integrity-code..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet"> <title>Solutions to Global Warming</title>
+    <style type="text/css">
+    .bowlby-one-regular {
+      font-family: "Bowlby One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .lexend-<uniquifier> {
+      font-family: "Lexend", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+    }
+    .outfit-<uniquifier> {
+      font-family: "Outfit", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+    }
+
+    html, body {
+      background-color: #fdf7ef;
+      color: #1f3c2d;
+      margin: 0;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #e6f4ea;
+      border-bottom: 2px solid #c2e0c2;
+    }
+    .hamburger-icon {
+      display: none;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+    }
+    .logo {
+      size: 100px;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #1f3c2d;
+      font-weight: 500;
+      font-family: "Lexend";
+      transition: color 0.25s;
+    }
+    .nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a:hover {
+  color: #DA4F37;
+}
+
+.container {
+width: 100%;
+max-width: 1000px;
+margin: 0 auto;
+padding: 20px;
+}
+.timeline {
+margin: 0 auto;
+max-width: 1200px;
+padding: 25px 50px;
+display: grid;
+grid-template-columns: 1fr 3px 1fr;
+}
+
+.timeline__component {
+margin: 0 30px 0 30px;
+max-width: 430px;
+padding-top: 10px;
+}
+
+/* LEAVE TILL LAST */
+.timeline__component--bottom {
+margin-bottom: 0;
+}
+
+.timeline__middle {
+position: relative;
+background: #326c52;
+}
+
+.timeline__point {
+position: absolute;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 15px;
+height: 15px;
+background: #326c52;
+border-radius: 50%;
+}
+
+/* LEAVE TILL LAST */
+.timeline__point--bottom {
+top: initial;
+bottom: 0;
+}
+
+.timeline__date--right {
+font-size: 25px;
+font-weight: bold;
+}
+.timeline__date {
+font-size: 25px;
+font-weight: bold;
+font-family: "Lexend";
+}
+
+.timeline__title {
+margin: 0;
+font-size: 1.15em;
+font-weight: bold;
+}
+
+.timeline__paragraph {
+line-height: 1.5;
+max-width: 600px;
+font-family: "Outfit";
+}
+.timeline img {
+  max-width: 450px;
+  height: 300px;
+}
+
+h1 {
+  font-family: "Bowlby One";
+  text-align: center;
+  font-size: 100px;
+  margin-bottom: 0.5rem;
+  background-image: linear-gradient(180deg,rgba(0, 113, 250, 1) 0%, rgba(0, 224, 94, 1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 40px;
+  line-height: 1.1;
+  letter-spacing: 3px;
+padding: 1rem;
+}
+footer {
+  background-color: #e6f4ea;
+  border-top: 2px solid #c2e0c2;
+  text-align: center;
+  padding: 1rem;
+  font-family: "Lexend";
+  margin-top: 100px;
+}
+.footer-text {
+  font-size: 1rem;
+  text-align: center;
+}
+/*---------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 1000px) {
+.container {
+width: 100%;
+max-width: 850px;
+margin: 0 auto;
+padding: 15px;
+}
+
+.timeline {
+margin: 0 auto;
+max-width: 900px;
+padding: 15px;
+display: grid;
+grid-template-columns: 1fr 3px 1fr;
+}
+
+.timeline__component {
+margin: 0 30px 0 30px;
+}
+
+.timeline__component--bg {
+
+}
+
+/* LEAVE TILL LAST */
+.timeline__component--bottom {
+margin-bottom: 0;
+}
+
+.timeline__middle {
+position: relative;
+background: #326c52;
+}
+
+.timeline__point {
+position: absolute;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+width: 15px;
+height: 15px;
+background: #326c52;
+border-radius: 50%;
+}
+
+/* LEAVE TILL LAST */
+.timeline__point--bottom {
+top: initial;
+bottom: 0;
+}
+
+.timeline__date--right {
+font-size: 25px;
+font-weight: bold;
+}
+.timeline__date {
+font-size: 20px;
+font-weight: bold;
+font-family: "Lexend";
+}
+
+.timeline__title {
+margin: 0;
+font-size: 1.15em;
+font-weight: bold;
+}
+
+.timeline__paragraph {
+line-height: 1.5;
+font-size: 15px;
+font-family: "Outfit";
+margin-top: 10px;
+margin-bottom: 0px;
+}
+.timeline img {
+  max-width: 325px;
+  height: 250px;
+  border-radius: 6px;
+}
+
+h1 {
+  font-family: "Bowlby One";
+  text-align: center;
+  font-size: 100px;
+  margin-bottom: 0.5rem;
+  background-image: linear-gradient(180deg,rgba(0, 113, 250, 1) 0%, rgba(0, 224, 94, 1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 40px;
+  line-height: 1.1;
+  letter-spacing: 3px;
+}
+footer {
+  background-color: #e6f4ea;
+  border-top: 2px solid #c2e0c2;
+  text-align: center;
+  padding: 2rem;
+  font-family: "Lexend";
+  margin-top: 100px;
+}
+.footer-text {
+  font-size: 0.95rem;
+  text-align: center;
+}
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 760px) {
+  h1 {
+    font-size: 60px;
+    padding: 1rem;
+  }
+  .container {
+width: 100%;
+max-width: 650px;
+margin: 0 auto;
+padding: 15px;
+}
+  .timeline__component,
+  .timeline__component--bg {
+    max-width: 600px;
+    margin: 0 auto;
+    order: unset;
+  }
+
+  .timeline__date {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .timeline__paragraph {
+    font-size: 0.95rem;
+  }
+
+  .timeline img {
+    max-width: 450px;
+    height: 250px;
+    object-fit: cover;
+  }
+
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 650px;
+    padding: 20px;
+  }
+
+  .timeline__middle {
+    display: none;
+  }
+
+    .logo {
+  size: 60%;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #1f3c2d;
+  font-weight: 500;
+  font-family: "Lexend";
+  transition: color 0.25s;
+  font-size: 15px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a:hover {
+  color: #DA4F37;
+}
+
+.hamburger-icon {
+  display: block;
+}
+
+
+.nav-items {
+  display: none;
+  flex-direction: column;
+  background-color: #e6f4ea;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 150px;
+  border: 1px solid #c2e0c2;
+  border-radius: 10px;
+  padding: 1rem;
+  z-index: 999;
+}
+
+.nav-items.show-nav {
+  display: flex;
+}
+
+.nav-items a {
+  margin: 0.5rem 0;
+}
+footer {
+  background-color: #e6f4ea;
+  border-top: 2px solid #c2e0c2;
+  text-align: center;
+  padding: 2rem;
+  font-family: "Lexend";
+  margin-top: 100px;
+}
+.footer-text {
+  font-size: 0.9rem;
+  text-align: center;
+}
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+  h1 {
+    font-size: 50px;
+    padding: 1rem;
+  }
+  .container {
+width: 100%;
+max-width: 350px;
+margin: 0 auto;
+padding: 0 1rem;
+}
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    max-width: 400px;
+    padding: 0 15px;
+  }
+  .timeline__date {
+    font-size: 18px;
+  }
+
+  .timeline__paragraph {
+    font-size: 0.9rem;
+  }
+  .timeline__component{
+    padding-top: 0px;
+  }
+  .timeline img {
+    max-width: 100%;
+    height: 200px;
+  }
+  footer {
+  background-color: #e6f4ea;
+  border-top: 2px solid #c2e0c2;
+  text-align: center;
+  padding: 2rem;
+  font-family: "Lexend";
+  margin-top: 100px;
+}
+.footer-text {
+  font-size: 0.85rem;
+  text-align: center;
+}
+}
+
+</style>
+</head>
+<body>
+  <header>
+<div class="logo"><i class="fa-solid fa-earth-americas fa-xl"></i></div>
+      <div class="hamburger-container">
+    <img src="images/Hamburger.png" alt="menu" class="hamburger-icon" id="hamburger-icon">
+  </div>
+  <nav class="nav-items" id="nav-items">
+    <a href="final.html">HOME</a>
+    <a href="cause.html">CAUSES</a>
+    <a href="effect.html">EFFECTS</a>
+    <a href="solution.html">SOLUTIONS</a>
+  </nav>
+  </header>
+  <h1>SOLUTIONS TO GLOBAL WARMING</h1>
+    <div class="container">
+        
+        <div class="timeline">
+          <div class="timeline__component">
+            <div class="timeline__date">Transition to Renewable Energy</div>
+            <div class="timeline__paragraph">
+            <p class="timeline__paragraph"><strong>How it helps:</strong> Reduce carbon emissions from fossil fuel use.<br><strong>How it can be done:</strong></p>
+            <ul>
+              <li>Build more solar farms, wind turbines, and hydropower plants.</li>
+              <li>Offer government incentives and subsidies for clean energy adoption.</li>
+              <li>Encourage individuals and businesses to install solar panels and switch to green electricity providers.</li>
+            </ul>
+            </div>
+
+          </div>
+          <div class="timeline__middle">
+            <div class="timeline__point"></div>
+          </div>
+          <div class="timeline__component timeline__component--bg">
+            <img src="images/solution_energy1.png" alt="Maldives Sea-Level Rise">
+          </div>
+          <div class="timeline__component timeline__component--bg">
+            <img src="images/solution_trans1.png" alt="California Wildfires">
+          </div>
+          <div class="timeline__middle">
+            <div class="timeline__point"></div>
+          </div>
+          <div class="timeline__component">
+            <div class="timeline__date">Sustainable Transportation</div>
+            <div class="timeline__paragraph">
+            <p class="timeline__paragraph"><strong>How it helps:</strong> Cuts down on emissions from vehicles.<br><strong>How it can be done:</strong></p>
+            <ul>
+              <li>Invest in public transportation, bike lanes, and pedestrian-friendly infrastructure.</li>
+              <li>Promote the use of electric vehicles (EVs) and fuel-efficient cars.</li>
+              <li>Create policies to reduce air travel and support cleaner shipping options.</li>
+            </ul>
+            </div>
+          </div>
+          <div class="timeline__component">
+            <div class="timeline__date timeline__date--right">Protect Forests and Replant Trees</div>
+            <div class="timeline__paragraph">
+            <p class="timeline__paragraph"><strong>How it helps:</strong> Forests absorb CO₂ and maintain ecological balance.<br><strong>How it can be done:</strong></p>
+            <ul>
+              <li>Enforce laws to stop deforestation (especially in the Amazon, Indonesia, etc.)</li>
+              <li>Launch large-scale reforestation and afforestation programs.</li>
+              <li>Support sustainable forestry and paper alternatives to reduce tree cutting.</li>
+            </ul>
+            </div>
+          </div>
+          <div class="timeline__middle">
+            <div class="timeline__point"></div>
+          </div>
+          <div class="timeline__component timeline__component--bg">
+            <img src="images/solution_plant.png" alt="Zhengzhou Flooding">
+          </div>
+          <div class="timeline__component timeline__component--bottom timeline__component--bg">
+            <img src="images/solution_food1.png" alt="Greenland Ice Sheet Melting">
+          </div>
+          <div class="timeline__middle">
+            <div class="timeline__point"></div>
+            <div class="timeline__point timeline__point--bottom"></div>
+          </div>
+          <div class="timeline__component timeline__component--bottom">
+            <div class="timeline__date">Adopt Sustainable Agriculture</div>
+            <div class="timeline__paragraph">
+            <p class="timeline__paragraph"><strong>How it helps:</strong> Reduces methane and nitrous oxide emissions from food production.<br><strong>How it can be done:</strong></p>
+            <ul>
+              <li>Encourage plant-based diets and reduce meat (especially beef) consumption.</li>
+              <li>Promote organic farming and better soil management.</li>
+              <li>Reduce food waste through education, better storage, and redistribution programs.</li>
+            </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <center>
+<footer>
+  <div class="footer-text-container">
+    <p class="footer-text">
+      This website gives credit to Baoyi Chai.
+    </p>
+
+    <p class="footer-text">
+      © All images and related content are sourced from public online platforms and are used for illustrative purposes only. Copyrights belong to their respective owners.
+    </p>
+  </div>
+</footer>
+
+</center>
+      <script>
+  const icon = document.getElementById("hamburger-icon");
+  const menu = document.getElementById("nav-items");
+
+  icon.addEventListener("click", () => {
+    menu.classList.toggle("show-nav");
+  });
+</script>
+</body>
+</html>

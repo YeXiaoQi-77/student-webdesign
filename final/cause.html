@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-...your-integrity-code..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Lexend:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <title>Causes of Global Warming</title>
+    <style type="text/css">
+    .bowlby-one-regular {
+      font-family: "Bowlby One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .lexend-<uniquifier> {
+      font-family: "Lexend", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+    }
+    .outfit-<uniquifier> {
+      font-family: "Outfit", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: <weight>;
+      font-style: normal;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      min-height: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url('images/causes_bg.png');
+      background-attachment: fixed;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #e6f4ea;
+      border-bottom: 2px solid #c2e0c2;
+    }
+
+    .logo {
+      size: 100px;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #1f3c2d;
+      font-weight: 500;
+      font-family: "Lexend";
+      transition: color 0.25s;
+    }
+
+    .nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a:hover {
+  color: #DA4F37;
+}
+
+.causes-section h1 {
+  font-family: "Bowlby One";
+  text-align: center;
+  font-size: 100px;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(180deg,rgba(255, 0, 0, 1) 0%, rgba(255, 175, 64, 1) 100%);
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-top: 40px;
+  line-height: 1.1;
+  letter-spacing: 3px;
+}
+
+.overview {
+  text-align: center;
+  max-width: 1075px;
+  margin: 2rem auto;
+  font-size: 1.2rem;
+  font-family: "Outfit";
+  padding: 2rem;
+  background-color: #f6e3b8;
+  border-radius: 12px;
+}
+.hamburger-container {
+  display: none;
+}
+
+.hamburger-icon {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.causes-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-areas:
+        "greenhouse greenhouse greenhouse deforestation deforestation"
+        "industrial industrial agriculture agriculture agriculture"
+        "transportation transportation transportation transportation transportation";
+      gap: 1.5rem;
+    margin: 0 2rem;
+    padding-bottom: 2rem;
+    }
+    .causes-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .item {
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .greenhouse { grid-area: greenhouse; background-color: #d9f3f0; }
+    .deforestation { grid-area: deforestation; background-color: #e7ecbd; }
+    .industrial { grid-area: industrial; background-color: #e6f2c2; }
+    .agriculture { grid-area: agriculture; background-color: #cdeef0; }
+    .transportation { grid-area: transportation; background-color: #f6e3b8; }
+
+    .item-inner {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 1.5rem;
+      min-width: 0;
+    }
+
+    .item-inner img {
+      width: 180px;
+      max-width: 100%;
+      height: auto;
+      flex-shrink: 0;
+    }
+
+    .text {
+      text-align: left;
+      min-width: 0;
+    }
+
+    .text h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
+      font-family: 'Lexend';
+      color: #1f3c2d;
+    }
+
+    .text p {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #2e4e3d;
+        font-family: "Outfit";
+    }
+      footer {
+  background-color: #e6f4ea;
+  border-top: 2px solid #c2e0c2;
+  text-align: center;
+  padding: 2rem;
+  font-family: "Lexend";
+  margin-top: 100px;
+}
+.footer-text {
+  font-size: 1rem;
+  text-align: center;
+}
+/*---------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 1000px) {
+  .causes-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "greenhouse"
+      "deforestation"
+      "industrial"
+      "agriculture"
+      "transportation";
+    padding: 1rem;
+     margin-bottom: 2rem;
+  }
+  .causes-section h1{
+    font-size: 65px;
+    padding: 1rem;
+  }
+  .overview {
+    text-align: center;
+    max-width: 850px;
+    margin: 2rem auto;
+    font-size: 1.1rem;
+    font-family: "Outfit";
+    padding: 2rem;
+    background-color: #f6e3b8;
+    border-radius: 12px;
+  }
+  .item-inner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    text-align: left;
+    gap: 1rem;
+  }
+
+  .item-inner img {
+    width: 125px;
+    height: auto;
+  }
+
+  .text h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .text p {
+    font-size: 0.95rem;
+  }
+    h1 {
+    font-size: 65px;
+    padding: 1rem;
+  }
+    footer {
+  background-color: #e6f4ea;
+  border-top: 2px solid #c2e0c2;
+  text-align: center;
+  padding: 2rem;
+  font-family: "Lexend";
+  margin-top: 100px;
+}
+.footer-text {
+  font-size: 0.95rem;
+  text-align: center;
+}
+}
+
+/*---------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 760px) {
+  .causes-section h1 {
+    font-size: 60px;
+    padding: 1rem;
+    margin-top: 40px;
+  }
+
+  .overview {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 600px;
+    margin: 1rem auto;
+    font-family: "Outfit";
+    padding: 1rem;
+    background-color: #f6e3b8;
+    border-radius: 12px;
+  }
+
+
+  .item-inner img {
+    width: 140px;
+  }
+  .hamburger-container {
+    display: block;
+  }
+
+  .logo {
+  size: 60%;
+}
+
+nav a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #1f3c2d;
+  font-weight: 500;
+  font-family: "Lexend";
+  transition: color 0.25s;
+  font-size: 15px;
+}
+
+.nav-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a:hover {
+  color: #DA4F37;
+}
+
+.hamburger-icon {
+  display: block;
+}
+
+.hamburger-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-items {
+  display: none;
+  flex-direction: column;
+  background-color: #e6f4ea;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  width: 150px;
+  border: 1px solid #c2e0c2;
+  border-radius: 10px;
+  padding: 1rem;
+  z-index: 999;
+}
+
+.nav-items.show-nav {
+  display: flex;
+}
+
+.nav-items a {
+  margin: 0.5rem 0;
+}
+  footer {
+  background-color: #e6f4ea;
+  border-top: 2px solid #c2e0c2;
+  text-align: center;
+  padding: 2rem;
+  font-family: "Lexend";
+  margin-top: 100px;
+}
+.footer-text {
+  font-size: 0.9rem;
+  text-align: center;
+}
+}
+/*---------------------------------------------------------------------------------------------------------------------------- */
+@media screen and (max-width: 480px) {
+  .causes-section h1 {
+    font-size: 50px;
+    margin-top: 30px;
+  }
+  .causes-section h1 {
+    font-size: 50px;
+    padding: 1rem;
+    margin-top: 40px;
+  }
+  .overview {
+    font-size: 0.95rem;
+    text-align: center;
+    max-width: 350px;
+    margin: 2rem auto;
+    font-family: "Outfit";
+    padding: 0.9rem;
+    background-color: #f6e3b8;
+    border-radius: 12px;
+  }
+
+  .item {
+    padding: 1.5rem;
+  }
+
+  .item-inner img {
+    width: 120px;
+  }
+
+  .text h2 {
+    font-size: 1.1rem;
+  }
+
+  .text p {
+    font-size: 0.9rem;
+  }
+  footer {
+  background-color: #e6f4ea;
+  border-top: 2px solid #c2e0c2;
+  text-align: center;
+  padding: 2rem;
+  font-family: "Lexend";
+  margin-top: 100px;
+}
+.footer-text {
+  font-size: 0.85rem;
+  text-align: center;
+}
+}
+
+
+
+  </style>
+</head>
+<body>
+<header>
+  <div class="logo"><i class="fa-solid fa-earth-americas fa-xl"></i></div>
+  <div class="hamburger-container">
+    <img src="images/Hamburger.png" alt="menu" class="hamburger-icon" id="hamburger-icon">
+  </div>
+  <nav class="nav-items" id="nav-items">
+    <a href="final.html">HOME</a>
+    <a href="cause.html">CAUSES</a>
+    <a href="effect.html">EFFECTS</a>
+    <a href="solution.html">SOLUTIONS</a>
+  </nav>
+</header>
+
+  <section class="causes-section">
+    <h1>CAUSES OF GLOBAL WARMING</h1>
+    <p class="overview">Global warming is driven by human activities that increase the concentration of greenhouse gases in the atmosphere. Major contributors include:</p>
+
+<div class="causes-grid">
+<div class="item greenhouse">
+  <div class="item-inner">
+    <div class="text">
+      <h2>Greenhouse Gas Emissions</h2>
+      <p>The burning of fossil fuels for energy is the primary source of carbon dioxide and other greenhouse gases.</p>
+    </div>
+    <img src="images/causes_green.png" alt="Greenhouse gases">
+  </div>
+</div>
+
+<div class="item deforestation">
+  <div class="item-inner">
+    <div class="text">
+      <h2>Deforestation</h2>
+      <p>The removal of trees reduces the planet’s capacity to absorb carbon dioxide from the atmosphere.</p>
+    </div>
+    <img src="images/cause_deforest.png" alt="Deforestation">
+  </div>
+</div>
+
+  <div class="item industrial">
+    <div class="item-inner">
+  <div class="text">
+    <h2>Industrial Activities</h2>
+    <p>Manufacturing processes release significant amounts of greenhouse gases and other pollutants.</p>
+  </div>
+  <img src="images/causes_indust.png" alt="Industrial">
+</div>
+  </div>
+
+<div class="item agriculture">
+  <div class="item-inner">
+    <div class="text">
+      <h2>Agriculture</h2>
+      <p>Farming practices and livestock produce methane, nitrous oxide, and other potent greenhouse gases.</p>
+    </div>
+    <img src="images/causes_agri.png" alt="Agriculture">
+  </div>
+</div>
+
+<div class="item transportation">
+  <div class="item-inner">
+    <div class="text">
+      <h2>Transportation</h2>
+      <p>Cars, trucks, airplanes and ships emit large quantities of carbon dioxide and other greenhouse gases.</p>
+    </div>
+    <img src="images/cause_trans.png" alt="Transportation">
+  </div>
+</div>
+
+
+    </div>
+  </section>
+
+  <center>
+<footer>
+  <div class="footer-text-container">
+    <p class="footer-text">
+      This website gives credit to ChatGPT for creation of background image.
+    </p>
+
+    <p class="footer-text">
+      © All images and related content are sourced from public online platforms and are used for illustrative purposes only. Copyrights belong to their respective owners.
+    </p>
+  </div>
+</footer>
+
+</center>
+  <script>
+  const icon = document.getElementById("hamburger-icon");
+  const menu = document.getElementById("nav-items");
+
+  icon.addEventListener("click", () => {
+    menu.classList.toggle("show-nav");
+  });
+</script>
+
+</body>
+</html>
