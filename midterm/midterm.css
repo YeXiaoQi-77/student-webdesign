@@ -401,7 +401,7 @@ a:hover {
   text-align: center;
   padding: 20px;
   border-radius: 15px;
-  width: 90%;
+  width: 80vw;
   max-width: 300px;
   height: 95%; 
   box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
@@ -460,7 +460,7 @@ a:hover {
   .album-container {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1rem;
+    padding: 20px;
     justify-items: center;
     width: 100%;
   }
@@ -482,7 +482,7 @@ a:hover {
 
 @media screen and (max-width: 480px) {
   .album-heading {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 1.5rem;
   }
   .album-container {
@@ -513,7 +513,7 @@ a:hover {
   text-align: center;
   position: relative;
   font-size: 60px;
-  margin-top: 100px;
+  margin-top: 150px;
   margin-bottom: 30px;
   letter-spacing: 1px;
   font-family: "Audiowide";
@@ -630,7 +630,7 @@ a:hover {
 
 @media screen and (max-width: 480px) {
   .song-heading {
-    font-size: 40px;
+    font-size: 30px;
     margin-bottom: 1.5rem;
   }
   .song-container {
@@ -648,125 +648,181 @@ a:hover {
 }
 
 /* Tours Section ----------------------------------------------------------------------------- */
-.tour {
-  margin-top: 100px;
-  margin-bottom: 100px;
-  background-color: black;
-  color: white;
-  padding: 40px;
+.tour-container {
   display: grid;
-  gap: 1.5rem;
-  justify-content: center;
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px, 200px, 200px, 200px 100px;
+  grid-template-areas:
+    "text1 image1 image2"
+    "image3 image1 image2"
+    "image3 image1 image4"
+    "image3 image1 image4"
+    "text2 text2 image4";
+  gap: 20px;
+  padding-bottom: 50px;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 80vw;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  overflow: hidden;
 }
+
 .tour-heading {
   text-align: center;
   font-size: 60px;
-  margin-bottom: 1rem;
+  margin-top: 150px;
+  margin-bottom: 30px;
   font-family: "Audiowide";
   color: #D4AF37;
 }
-.tour-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  max-width: 80vw;
-  margin: auto;
-}
-.tour-item.big {
-  grid-column: span 2;
+
+.tour-text1 {
+  grid-area: text1;
   display: flex;
   justify-content: center;
-}
-.tour-item.big img {
-  width: 100%;
-  max-height: 600px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.tour-text {
-  grid-column: span 2;
+  align-items: center;
+  background-color: #d4af37;
+  color: black;
   text-align: center;
-  font-size: 1.25rem;
-  font-family: "Rationale";
-  max-width: 70%;
-  margin: auto;
-}
-.tour-item.small img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-}
-.tour-text.last {
-  grid-column: span 2;
-  text-align: center;
+  font-family: "Rationale", sans-serif;
   font-size: 1.3rem;
-  font-family: "Rationale";
-  max-width: 70%;
-  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  border: 2px solid rgba(212, 175, 55, 0.5);
+
+}
+.tour-text2 {
+  grid-area: text2;
+  background-color: #d4af37;
+  color: black;
+  text-align: center;
+  font-family: "Rationale", sans-serif;
+  font-size: 1.3rem;
+  border-radius: 10px;
+  padding: 20px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  border: 2px solid rgba(212, 175, 55, 0.5);
+}
+
+.tour-img1 {
+  grid-area: image1;
+}
+.tour-img2 {
+  grid-area: image2;
+}
+.tour-img3 {
+  grid-area: image3;
+}
+.tour-img4 {
+  grid-area: image4;
+}
+
+.tour-img1, .tour-img2, .tour-img3, .tour-img4 {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.tour-img1 img,
+.tour-img2 img,
+.tour-img3 img,
+.tour-img4 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+  
+}
+
+.tour-link {
+  margin-left: 5px;
+  font-weight: bold;
+  color: black;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.tour-link:hover {
+  color: white;
 }
 
 @media screen and (max-width: 1000px) {
   .tour-container {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "image3 image3"
+      "text1 text1"
+      "image1 image2"
+      "text2 text2"
+      "image4 image4";
   }
-  .tour-item.big, 
-  .tour-text,
-  .tour-item.small,
-  .tour-text.last {
-    grid-column: span 1;
-  }
-  .tour-text, .tour-text.last {
-    font-size: 1.3rem;
-  }
-  .tour-item.big img {
-    max-height: 500px;
-  }
-  .tour-item.small img {
-    height: 300px;
+  .tour-heading{
+    font-size: 50px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .tour-heading {
-    font-size: 40px;
-  }
-  .tour-text, .tour-text.last {
-    font-size: 1rem;
-    max-width: 90%;
-  }
-  .tour-item.big img {
-    max-height: 350px;
-  }
-  .tour-item.small img {
-    height: 220px;
-  }
-}
-  
-@media screen and (max-width: 480px) {
   .tour-container {
     grid-template-columns: 1fr;
+    grid-template-rows: 300px 75px 175px 175px 175px 60px;
+    grid-template-areas:
+      "image1"
+      "text1"
+      "image2"
+      "image3"
+      "image4"
+      "text2";
   }
-  .tour-text, .tour-text.last {
+  .tour-heading{
+    font-size: 40px;
+  }
+  .tour-text1, .tour-text2 {
     font-size: 1.1rem;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
   }
-  .tour-item.big img {
-    max-height: 300px;
+  .tour-img1 img {
+    object-position: 0% 25%;;
   }
-  .tour-item.small img {
-    height: 200px;
+  .tour-img4 img {
+    object-position: center;
   }
 }
 
-.custom-link {
-    color: #D4AF37;
-    text-decoration: none;
-    font-weight: bold;
-}
-.custom-link:hover {
-    text-decoration: underline;
-    color: #60A8A0;
+@media screen and (max-width: 480px) {
+  .tour-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px 75px 125px 125px 125px 68px;
+    grid-template-areas:
+      "image1"
+      "text1"
+      "image2"
+      "image3"
+      "image4"
+      "text2";
+  }
+  .tour-heading{
+    font-size: 30px;
+  }
+  .tour-img1 img {
+    object-position: 0% 25%;
+  }
+  .tour-img4 img {
+    object-position: bottom;
+  }
+  .tour-text1, .tour-text2 {
+    font-size: 1rem;
+  } 
 }
 
 /* Footer Section -----------------------------------------------------------------------------*/
@@ -777,6 +833,7 @@ footer {
   padding: 40px 20px;
   font-family: "Rationale", sans-serif;
   border-top: 2px solid rgba(255, 255, 255, 0.2);
+  margin-top: 150px;
 }
 .footer-socials {
   display: flex;
@@ -802,7 +859,7 @@ footer {
   font-size: 40px;
   font-weight: bold;
   font-family: "Audiowide";
-  margin-bottom: 100px;
+  margin-bottom: 60px;
   color: #D4AF37;
 }
 
